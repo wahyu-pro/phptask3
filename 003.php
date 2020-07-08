@@ -43,27 +43,31 @@ class Auth extends Login{
         $user_login = [
             "username" => $this->currentLogin["username"]
         ];
-        var_dump($user_login);
+        echo "Username : ".$user_login["username"];
     }
 
     function id(){
-        var_dump($this->currentLogin["id_user"]);
+        echo "Id User : ".$this->currentLogin["id_user"];
     }
 
     function check(){
         if($this->currentLogin['status'] == "logged in"){
-            echo "True";
+            echo "Login : True";
+        }else{
+            echo "Login : False";
         }
     }
 
     function guest(){
         if($this->currentLogin['status'] == "logout"){
-            echo "True";
+            echo "Logout True";
+        }else{
+            echo "Logout False";
         }
     }
 
     function lastLogin(){
-        echo $this->currentLogin['time_login'];
+        echo "Last Login : ".$this->currentLogin['time_login'];
     }
 }
 

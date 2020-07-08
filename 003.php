@@ -60,9 +60,9 @@ class Auth extends Login{
 
     function guest(){
         if($this->currentLogin['status'] == "logout"){
-            echo "Logout True";
+            echo "Logout : True";
         }else{
-            echo "Logout False";
+            echo "Logout : False";
         }
     }
 

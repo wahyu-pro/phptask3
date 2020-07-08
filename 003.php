@@ -16,7 +16,7 @@ class Auth extends Login{
         $user = parent::data_user();
         if($login['username'] == $user['username'] and $login['password'] == $user['password']){
             $this->currentLogin = [
-                "id_user" => uniqid(),
+                "id_user" => 1,
                 "username" => $login["username"],
                 "password" => $login["password"],
                 "time_login" => date("Y/m/d H:i:s"),
